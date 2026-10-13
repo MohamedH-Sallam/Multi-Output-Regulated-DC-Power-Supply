@@ -74,7 +74,7 @@ Cursor based measurement on the unfiltered full wave rectified node: crest at
 98.89mV, trough at -98.89mV, giving a peak to peak ripple of 197.78mV before
 the filter capacitors are applied.
 
-## Finished Prototype
+## Finished Prototype (100% Real Footage, Only an AI Background)
 
 ![Assembled prototype](images/assembled-prototype.jpg)
 
