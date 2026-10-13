@@ -1,4 +1,4 @@
-![Multi-Output Regulated DC Power Supply](images/cover.png)
+![Multi-Output Regulated DC Power Supply](images/cover.svg)
 
 # Multi-Output Regulated DC Power Supply
 
@@ -13,6 +13,18 @@ Final project, Electrical Engineering II (MNG 232), Nile University.
 | Design team | Abdullah Salem, Abdullah Mohamed, Mohamed Sallam, Ziad Ali |
 | Supervisor | Dr. Mohamed Elhossainy |
 | Date | May 9, 2026 |
+## Table of Contents
+
+- [Overview](#overview)
+- [Output Specification](#output-specification)
+- [Signal Path](#signal-path)
+- [Key Results](#key-results)
+- [Simulation: Ripple Before Filtering](#simulation-ripple-before-filtering)
+- [Finished Prototype](#finished-prototype)
+- [Full Report](#full-report)
+- [Repository Structure](#repository-structure)
+- [Conclusion](#conclusion)
+
 
 ## Overview
 
