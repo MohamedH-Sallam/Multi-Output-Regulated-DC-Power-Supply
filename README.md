@@ -13,17 +13,14 @@ Final project, Electrical Engineering II (MNG 232), Nile University.
 | Design team | Abdullah Salem, Abdullah Mohamed, Mohamed Sallam, Ziad Ali |
 | Supervisor | Dr. Mohamed Elhossainy |
 | Date | May 9, 2026 |
-## Table of Contents
+## Project Contents
 
-- [Overview](#overview)
-- [Output Specification](#output-specification)
-- [Signal Path](#signal-path)
-- [Key Results](#key-results)
-- [Simulation: Ripple Before Filtering](#simulation-ripple-before-filtering)
-- [Finished Prototype](#finished-prototype)
-- [Full Report](#full-report)
-- [Repository Structure](#repository-structure)
-- [Conclusion](#conclusion)
+- [Full Technical Report](reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf)
+- [Mathematical Design Calculations](docs/design-calculations.md)
+- [Measured Test Results](docs/test-results.md)
+- [Signal Path & Output Architecture](#signal-path)
+- [Prototype & Oscilloscope Evidence](docs/oscilloscope-gallery.md)
+- [Bill of Materials](docs/bill-of-materials.md)
 
 
 ## Overview
