@@ -100,7 +100,7 @@ power indicator LEDs.
 The complete write up, covering simulation methodology, every derivation,
 and the full set of comparative figures, is available as a single PDF:
 
-[reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf](reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf)
+[reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf](Formal Faculty Reviewed Report)
 
 ## Repository Structure
 
