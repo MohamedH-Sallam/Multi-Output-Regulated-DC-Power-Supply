@@ -57,3 +57,7 @@ Negligible peak to peak noise across all six traces confirms that the
 decoupling capacitors neutralize high frequency transients on every rail.
 Combined with the DC accuracy table above, the finished supply is suitable
 for powering and testing sensitive electronic instrumentation.
+
+For larger copies of each trace with their measured mean and amplitude
+values side by side, see the
+[oscilloscope gallery](oscilloscope-gallery.md).

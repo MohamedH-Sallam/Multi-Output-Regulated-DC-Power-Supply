@@ -1,67 +1,125 @@
+![Multi-Output Regulated DC Power Supply](images/cover.png)
+
 # Multi-Output Regulated DC Power Supply
 
-**Project status: Published** · Electrical Engineering II (MNG 232) · Nile University · May 9, 2026
+A six rail regulated DC power supply delivering fixed ±5V and ±9V outputs
+alongside adjustable ±12V outputs, designed in NI Multisim and realized as a
+soldered hardware prototype.
 
-A six-rail linear regulated DC power supply delivering fixed ±5 V and ±9 V outputs alongside adjustable ±12 V outputs. The project progressed from NI Multisim simulation and analytical design calculations to a soldered hardware prototype and empirical validation.
+Final project, Electrical Engineering II (MNG 232), Nile University.
 
 | | |
 |---|---|
 | Design team | Abdullah Salem, Abdullah Mohamed, Mohamed Sallam, Ziad Ali |
 | Supervisor | Dr. Mohamed Elhossainy |
-| Course | Electrical Engineering II (MNG 232) |
+| Date | May 9, 2026 |
 
-## At a glance
+## Overview
 
-- **Six regulated rails:** +5 V, −5 V, +9 V, −9 V, adjustable +12 V, adjustable −12 V.
-- **Power architecture:** 12-0-12 V center-tapped transformer, 2W005G full-wave bridge rectifier, 2200 µF filtering, linear regulation, and output decoupling.
-- **Regulators:** 7805, 7905, 7809, 7909, LM317, and LM337.
-- **Validation:** NI Multisim, analytical calculations, digital multimeter, and Tektronix DPO4104 oscilloscope.
+The supply converts single phase 220V AC mains into six independent regulated
+DC rails using a center tapped step down transformer, a full wave bridge
+rectifier, capacitive filtering, and linear IC regulation. Fixed rails use the
+78xx/79xx family, and the adjustable ±12V rails use LM317/LM337 regulators
+with a potentiometer for continuous tuning.
 
-## Measured results
+The design was carried through three stages: circuit simulation in NI
+Multisim, analytical hand calculation of every stage, and physical assembly
+on a soldered board with empirical validation using a digital multimeter and
+a Tektronix DPO4104 oscilloscope.
+
+## Output Specification
+
+| Rail | Type | Regulator |
+|---|---|---|
+| +5V | Fixed | 7805 |
+| -5V | Fixed | 7905 |
+| +9V | Fixed | 7809 |
+| -9V | Fixed | 7909 |
+| +12V | Adjustable | LM317 |
+| -12V | Adjustable | LM337 |
+
+## Signal Path
+
+1. 12-0-12V center tapped step down transformer
+2. Full wave bridge rectifier (2W005G)
+3. Capacitive filtering, 2200µF per rail
+4. Linear IC regulation (fixed and adjustable stages)
+5. Output decoupling, 100nF and 10µF
+6. Terminal block with LED rail indicators
+
+## Key Results
+
+All six rails stayed within 4% of their simulated targets when measured on
+the finished hardware.
 
 | Rail | Simulated | Measured | Error |
-|---|---:|---:|---:|
-| +5 V fixed | 5.01 V | 4.93 V | 1.59% |
-| −5 V fixed | −5.03 V | −4.96 V | 1.39% |
-| +9 V fixed | 9.01 V | 9.29 V | 3.11% |
-| −9 V fixed | −9.01 V | −9.08 V | 0.78% |
-| +12 V adjustable | 11.8 V | 12.26 V | 3.90% |
-| −12 V adjustable | −11.9 V | −12.27 V | 3.11% |
+|---|---|---|---|
+| +5V Fixed | 5.01V | 4.93V | 1.59% |
+| -5V Fixed | -5.03V | -4.96V | 1.39% |
+| +9V Fixed | 9.01V | 9.29V | 3.11% |
+| -9V Fixed | -9.01V | -9.08V | 0.78% |
+| +12V Variable | 11.8V | 12.26V | 3.90% |
+| -12V Variable | -11.9V | -12.27V | 3.11% |
 
-All reported rails measured within 4% of their simulated targets. See [full test results and oscilloscope evidence](docs/test-results.md).
+Simulated ripple on the unfiltered rectifier output was measured at
+197.78mV peak to peak. After the 2200µF filter stage, the oscilloscope
+traces on every finished rail show a flat DC level with negligible residual
+ripple, confirming the filtering and regulation stages perform as designed.
 
-## Hardware prototype
+Full detail is in [docs/test-results.md](docs/test-results.md), and every
+rail's trace is in the [oscilloscope gallery](docs/oscilloscope-gallery.md).
 
-![Assembled six-rail regulated power supply](images/assembled-prototype.jpg)
+## Simulation: Ripple Before Filtering
 
-The prototype uses a soldered board and custom enclosure with front-panel output terminals, a ground reference, adjustment dials for the variable rails, and power-indicator LEDs.
+![Unfiltered ripple waveform](images/ripple-waveform-simulation.png)
 
-## Signal path
+Cursor based measurement on the unfiltered full wave rectified node: crest at
+98.89mV, trough at -98.89mV, giving a peak to peak ripple of 197.78mV before
+the filter capacitors are applied.
 
-1. 12-0-12 V center-tapped step-down transformer
-2. Full-wave bridge rectifier (2W005G)
-3. Capacitive filtering (2200 µF per rail, as documented)
-4. Fixed and adjustable linear regulators
-5. Output decoupling (100 nF and 10 µF)
-6. Output terminal block and LED rail indicators
+## Finished Prototype
 
-## Documentation
+![Assembled prototype](images/assembled-prototype.jpg)
 
-- [Design calculations](docs/design-calculations.md) — transformer, rectifier, filter, and regulator calculations
-- [Bill of materials](docs/bill-of-materials.md) — components used in the design
-- [Test results](docs/test-results.md) — simulated-versus-measured comparison and oscilloscope traces
-- [Visual project page](docs/index.html) — responsive overview and prototype gallery
+The circuit was moved from breadboard to a permanent soldered board and
+housed in a custom enclosure with front panel terminals for all six outputs,
+a ground reference, two calibration dials for the adjustable rails, and
+power indicator LEDs.
 
-## Team
+## Full Report
 
-Abdullah Salem · Abdullah Mohamed · Mohamed Sallam · Ziad Ali
+The complete write up, covering simulation methodology, every derivation,
+and the full set of comparative figures, is available as a single PDF:
 
-**Supervisor:** Dr. Mohamed Elhossainy
+[reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf](reports/Multi-Output-Regulated-DC-Power-Supply-Report.pdf)
 
-## Safety
+## Repository Structure
 
-**Mains-voltage warning:** This project interfaces with 220 V AC mains. Assembly, inspection, and operation must be performed only by people trained in electrical safety, with appropriate isolation, enclosure, fusing, and supervision. This documentation is not a safety certification.
+```
+.
+├── README.md
+├── docs/
+│   ├── design-calculations.md     Transformer, rectifier, filter, and regulator math
+│   ├── bill-of-materials.md       Full component list
+│   ├── test-results.md            Simulated vs measured comparison
+│   └── oscilloscope-gallery.md    Full gallery of all six rail traces
+├── reports/
+│   └── Multi-Output-Regulated-DC-Power-Supply-Report.pdf
+└── images/
+    ├── cover.png
+    ├── ripple-waveform-simulation.png
+    ├── assembled-prototype.jpg
+    ├── scope-plus5v.jpg
+    ├── scope-minus5v.jpg
+    ├── scope-plus9v.jpg
+    ├── scope-minus9v.jpg
+    ├── scope-plus12v.jpg
+    └── scope-minus12v.jpg
+```
 
----
+## Conclusion
 
-*Project status: Published. Technical claims and measured values reflect the project records; they should not be interpreted as certification of load regulation, thermal performance, or electrical safety.*
+Every rail tracked its simulated target within a 4% margin, and oscilloscope
+validation confirmed clean, low noise DC output on all six channels. The
+result is a reliable bench grade multi rail supply suitable for powering and
+testing sensitive electronic instrumentation.
