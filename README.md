@@ -4,9 +4,6 @@
 
 A six-rail linear regulated DC power supply delivering fixed ±5 V and ±9 V outputs alongside adjustable ±12 V outputs. The project progressed from NI Multisim simulation and analytical design calculations to a soldered hardware prototype and empirical validation.
 
-> **Project website:** [Open the visual project showcase](https://mohamedh-sallam.github.io/Multi-Output-Regulated-DC-Power-Supply/)  
-> **Repository:** [Source files on GitHub](https://github.com/MohamedH-Sallam/Multi-Output-Regulated-DC-Power-Supply)
-
 | | |
 |---|---|
 | Design team | Abdullah Salem, Abdullah Mohamed, Mohamed Sallam, Ziad Ali |
