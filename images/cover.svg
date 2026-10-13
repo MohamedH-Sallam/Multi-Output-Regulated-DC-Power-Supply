@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">Multi-Output Regulated DC Power Supply — Engineering Project</title>
+<desc id="desc">A polished engineering cover showing six regulated voltage rails and a simplified power-supply signal path.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#07111f"/><stop offset=".55" stop-color="#0d1c31"/><stop offset="1" stop-color="#10152a"/></linearGradient>
+  <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5eead4"/><stop offset="1" stop-color="#67b7ff"/></linearGradient>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#7aa2c7" stroke-opacity=".10" stroke-width="1"/></pattern>
+  <filter id="glow"><feGaussianBlur stdDeviation="9"/></filter>
+</defs>
+<rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#grid)"/>
+<circle cx="1320" cy="140" r="270" fill="#1f7a8c" opacity=".14" filter="url(#glow)"/>
+<path d="M0 700 C300 620 520 780 850 700 S1330 610 1600 690" fill="none" stroke="#3b82f6" stroke-opacity=".12" stroke-width="2"/>
+<g font-family="Inter,Segoe UI,Arial,sans-serif">
+  <text x="100" y="105" fill="#5eead4" font-size="22" font-weight="700" letter-spacing="5">NILE UNIVERSITY  /  ENGINEERING PROJECT</text>
+  <rect x="100" y="145" width="78" height="5" rx="2.5" fill="url(#cyan)"/>
+  <text x="100" y="235" fill="#f3f7fc" font-size="66" font-weight="750" letter-spacing="-2">MULTI-OUTPUT</text>
+  <text x="100" y="315" fill="#f3f7fc" font-size="66" font-weight="750" letter-spacing="-2">REGULATED DC</text>
+  <text x="100" y="395" fill="#5eead4" font-size="66" font-weight="750" letter-spacing="-2">POWER SUPPLY</text>
+  <text x="103" y="450" fill="#b7c6d9" font-size="25">Simulation · Analytical Design · Hardware Validation</text>
+  <text x="103" y="492" fill="#8298b4" font-size="20">Electrical Engineering II  /  MNG 232</text>
+  <g transform="translate(100 570)">
+    <rect width="1400" height="175" rx="22" fill="#0b1525" stroke="#30445e" stroke-width="2"/>
+    <text x="28" y="38" fill="#a9bfd5" font-size="16" font-weight="700" letter-spacing="3">SIX REGULATED OUTPUT RAILS</text>
+    <g transform="translate(28 62)">
+      <g><rect width="205" height="80" rx="12" fill="#102a3a" stroke="#3c8293"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">+5 V</text><text x="18" y="59" fill="#72d7d0" font-size="15">FIXED · 7805</text></g>
+      <g transform="translate(224)"><rect width="205" height="80" rx="12" fill="#102a3a" stroke="#3c8293"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">−5 V</text><text x="18" y="59" fill="#72d7d0" font-size="15">FIXED · 7905</text></g>
+      <g transform="translate(448)"><rect width="205" height="80" rx="12" fill="#102a3a" stroke="#3c8293"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">+9 V</text><text x="18" y="59" fill="#72d7d0" font-size="15">FIXED · 7809</text></g>
+      <g transform="translate(672)"><rect width="205" height="80" rx="12" fill="#102a3a" stroke="#3c8293"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">−9 V</text><text x="18" y="59" fill="#72d7d0" font-size="15">FIXED · 7909</text></g>
+      <g transform="translate(896)"><rect width="205" height="80" rx="12" fill="#17263b" stroke="#557ab3"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">+12 V</text><text x="18" y="59" fill="#91bdff" font-size="15">ADJUSTABLE · LM317</text></g>
+      <g transform="translate(1120)"><rect width="205" height="80" rx="12" fill="#17263b" stroke="#557ab3"/><text x="18" y="33" fill="#f4fbff" font-size="27" font-weight="700">−12 V</text><text x="18" y="59" fill="#91bdff" font-size="15">ADJUSTABLE · LM337</text></g>
+    </g>
+  </g>
+  <text x="100" y="810" fill="#d6e1ef" font-size="20" font-weight="600">DESIGN TEAM</text>
+  <text x="100" y="843" fill="#a9b9cc" font-size="18">Abdullah Salem  ·  Abdullah Mohamed  ·  Mohamed Sallam  ·  Ziad Ali</text>
+  <text x="1500" y="843" fill="#5eead4" font-size="18" text-anchor="end">MAY 09, 2026</text>
+</g></svg>
